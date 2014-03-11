@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mopon.dao.master.sys.IQrtzLogDao">
+	
+	<resultMap type="QrtzLogInfo" id="qrtzLogResultMap">
+		<id property="logId" column="LOGID" />
+		<result property="level" column="LEVEL" />
+		<result property="description" column="DESCRIPTION" />
+		<result property="createTime" column="CREATETIME" />
+	</resultMap>
+
+	
+	<!-- 添加任务日志 -->
+	<insert id="save" parameterType="QrtzLogInfo"  useGeneratedKeys="true" keyProperty="roleId">
+		INSERT INTO  QRTZ_LOG_INFO (LEVEL, DESCRIPTION, CREATETIME) VALUES(#{level}, #{description}, #{createTime})
+	</insert>
+
+	<!-- 查询任务日志 -->
+	<select id="queryQrtzLogs" parameterType="QrtzLogInfo" resultMap="qrtzLogResultMap">
+		SELECT * FROM QRTZ_LOG_INFO  where 1=1
+		<if test="qrtzLogInfo.level != null"> and LEVEL = #{qrtzLogInfo.level} </if>
+		 order by LOGID desc
+		 LIMIT #{startPage,jdbcType=INTEGER}, #{pageSize,jdbcType=INTEGER}
+	</select>
+	
+	<!-- 查询记录总数 -->
+	<select id="queryCount" parameterType="QrtzLogInfo" resultType="int">
+		SELECT count(LOGID)  FROM QRTZ_LOG_INFO  where 1=1
+		<if test="qrtzLogInfo.level != null"> and LEVEL = #{qrtzLogInfo.level} </if>
+	</select>
+	
+</mapper>

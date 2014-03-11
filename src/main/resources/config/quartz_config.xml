@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!--  
+id:trigger的bean ID
+name:任务名称
+-->
+<mappings>
+	<mapping id="cronTriggerBean" name="非序列化任务"  />
+	<mapping id="cronLoggerTriggerBean" name="日志定时入库"  />
+</mappings>

@@ -1,0 +1,28 @@
+/* CSS Document */
+html{ overflow:hidden;}
+body{ background:url(../images/bg.jpg) top center no-repeat #003e65; overflow:hidden;}
+div,input{ outline:none;}
+
+.l_box{ position:absolute; left:50%;top:50%;width: 0px; height:0px;}
+.l_contain{ width: 450px; position:absolute; left:-225px;top:-300px;height:526px; }
+.l_contain span{display:inline-block; vertical-align:middle;}
+.logo{  width:200px; height:65px; background:url(../images/logo.png) left top no-repeat;}
+.sub_logo{ border-left:2px solid #1ca1eb; padding-left:8px; height:28px; line-height:28px; font-family:微软雅黑; font-size:20px; font-weight:normal; color:#1fadff; margin-left:5px;}
+.login_tit{ font-family:微软雅黑; font-size:32px;  border-bottom:#1ca1eb 1px solid; color:#1ca1eb; margin:20px 0 0 0;}
+.login_box{  width:450px; height:330px; margin:23px 0 0 0;}
+
+.login_box .input{ width:290px; height:50px; margin-left:30px; padding-left:60px; border:#c0e4f9 1px solid; }
+.login_box .input span{ display:inline-block; height:40px; line-height:48px; width:80px; vertical-align:middle;font-family:微软雅黑; color:#FFF; font-size:18px; float:left;}
+.login_box .input:hover{border:#fff 1px solid;}
+.login_box .input input.text{height:30px; width:186px; float:left; border:none; background-color:transparent; line-height:30px; padding:10px 0 10px 0; font-size:14px; vertical-align:middle;}
+.login_box .input input.yzm{width:100px;}
+.yzm_img{ vertical-align:middle; margin-top:7px;}
+
+.input_1{ background:url(../images/input_username.jpg) left top no-repeat; margin-top:18px;}
+.input_2{ background: url(../images/input_password.jpg) left top no-repeat; margin-top:30px;}
+.input_3{ background: url(../images/input_yzm.jpg) left top no-repeat; margin-top:30px;}
+.l_context{ background-color:#1fadff; padding:20px 30px 30px 15px;}
+.login_btn{ height:113px; width:450px; border:none; cursor:pointer; background:url(../images/login_btn.jpg) left top no-repeat; }
+.login_btn:hover{ background:url(../images/login_btnhover.jpg) ;}
+
+
